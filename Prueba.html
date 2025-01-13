@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proforma Dinámica</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Proforma Dinámica</h1>
+    <table id="proformaTable">
+      <thead>
+        <tr>
+          <th>N° CORRELATIVO</th>
+          <th>DESCRIPCIÓN</th>
+          <th>CANTIDAD</th>
+          <th>PRECIO UNITARIO</th>
+          <th>PRECIO TOTAL</th>
+          <th>ACCIÓN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td><input type="text" placeholder="Descripción"></td>
+          <td><input type="text" class="cantidad" placeholder="01 unid."></td>
+          <td><input type="number" class="unitario" placeholder="0.00"></td>
+          <td><span class="total">0.00</span></td>
+          <td><button class="deleteRow">🗑 Eliminar</button></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" style="text-align: right;">SUBTOTAL:</td>
+          <td><span id="subtotal">0.00</span></td>
+        </tr>
+        <tr>
+          <td colspan="4" style="text-align: right;">IGV (18%):</td>
+          <td><span id="igv">0.00</span></td>
+        </tr>
+        <tr>
+          <td colspan="4" style="text-align: right; font-weight: bold;">TOTAL:</td>
+          <td><span id="total">0.00</span></td>
+        </tr>
+      </tfoot>
+    </table>
+    <button id="addRowButton">➕ Agregar Fila</button>
+    <button id="exportToWord">📄 Exportar a Word</button>
+    <button id="exportToExcel">🖨 Imprimir</button>
+  </div>
+
+  <script src="libs/xlsx.full.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
